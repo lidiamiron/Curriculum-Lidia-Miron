@@ -26,6 +26,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Cursor
+
 var cursor = document.querySelector(".cursor");
 var cursor2 = document.querySelector(".cursor2");
 
@@ -58,6 +60,7 @@ document
     });
   });
 
+// Get in touch
 let inTouchSection = document.querySelector(".in-touch");
 let line1 = document.querySelector(".line-1");
 let line2 = document.querySelector(".line-2");
@@ -98,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Ensure header stops being fixed after the job title section is out of view
     const nextSectionOffsetTop =
-      jobTitleOffsetTop + jobTitleSection.offsetHeight;
+      jobTitleOffsetTop + (270 % jobTitleSection.offsetHeight);
     if (window.scrollY >= nextSectionOffsetTop) {
       header.classList.remove("fixed");
       header.classList.remove("blurred");
